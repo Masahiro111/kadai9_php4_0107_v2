@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ChirpController;
 use App\Http\Controllers\ProfileController;
+use App\Models\Chirp;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,8 +17,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    $chirps = Chirp::query()
+        ->with('user')
+        ->latest()
+        ->get();
+
+    return view('welcome', compact('chirps'));
+})->name('home');
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
