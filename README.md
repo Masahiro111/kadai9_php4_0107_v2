@@ -14,7 +14,7 @@ Laravel で作成した Twitter 風の記事を編集できるマイクロブロ
 ・Laravel の認証パッケージである Laravel Breeze でプロフィール画像の追加作業がとても難しかった。  
   
 ## ④ 質問・疑問・感想、シェアしたいこと等なんでも
-**Techpit**  
+**YouTube**  
 Laravel Breeze Profile Picture with Preview using Alpine JS  
 https://www.youtube.com/watch?v=rbG0wWbPo-U  
   
