@@ -14,7 +14,7 @@
                     <div class="flex justify-between items-center">
                         <div>
                             <span class="text-gray-800 font-bold">{{ $chirp->user->name }}</span>
-                            <small class="ml-2 text-sm text-gray-600">{{ $chirp->created_at->format('Y年m月d日 g:i:a') }}</small>
+                            <small class="ml-2 text-sm text-gray-600">{{ $chirp->created_at->format('Y年m月d日 H:i:s') }}</small>
                             @unless ($chirp->created_at->eq($chirp->updated_at))
                             <small class="text-sm text-gray-600"> &middot; {{ __('edited') }}</small>
                             @endunless
