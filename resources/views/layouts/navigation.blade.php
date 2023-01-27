@@ -31,9 +31,7 @@
                         <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
                             <div class="flex items-center">
                                 {{ Auth::user()->name }}
-                                @if (Auth::user()->picture)
-                                <img src="{{ asset(Auth::user()->picture) }}" alt="" class="w-8 h-8 rounded-full object-cover ml-3">
-                                @endif
+                                <img src="{{ isset(Auth::user()->picture) ? asset(Auth::user()->picture) : asset('images/user_icon.png') }}" alt="" class="w-8 h-8 rounded-full object-cover ml-3">
                             </div>
 
                             <div class="ml-1">
